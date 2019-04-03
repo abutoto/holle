@@ -29,7 +29,7 @@ def parse_one_page(html):
 		yield '%3s\t%-20s %-5s %-20s\n' % (index, name, score, quote)
 
 def write_to_file(content):
-	with open(r'D:\zhangsheng013\Desktop\other\python\result.txt', 'a', encoding='utf-8') as f:
+	with open('result.txt', 'a', encoding='utf-8') as f:
 		f.write(content)
 		print(content)
 
