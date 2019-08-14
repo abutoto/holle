@@ -22,7 +22,11 @@ def read_file(name, sp='\t'):
             yield line
 
 if __name__ == "__main__":
-    logging.basicConfig(level=logging.DEBUG, filename='./log/log.txt', filemode='w', format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
+    logging.basicConfig(level=logging.INFO, \
+        filename='./log/log.txt', \
+        filemode='w', \
+        datefmt='%Y-%m-%d %H:%M:%S', \
+        format='%(asctime)s - %(filename)s[line:%(lineno)d] - %(levelname)s: %(message)s')
 
     conf_file = "conf/env.conf"
     config.read(conf_file)
